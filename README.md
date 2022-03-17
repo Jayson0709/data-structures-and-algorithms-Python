@@ -1,26 +1,27 @@
 ### Typical Data Structures and Algorithms in Python
 
-(Will be updated irregularly.)
+Will update the project if I have some time.
 
 ### Algorithms
 
 ```
 Algoritms directory
-|--- Sorting
+|--- Array-relevant Algorithms
+|       |---kth_largest_of_two_sorted_array.py
+|--- Cache Algorithms
+|       |---LRU.py
+|--- Dynamic Programming
+|       |---Longest_substring.py
+|--- Linkedlist-relevant Algorithms
+|       |---reverse_singly-linked_list.py
+|       |---sorted_linkedlist.py
+|--- Search
 |       |---binary_search.py
+|--- Sorting
 |       |---bubble_sort.py
 |       |---counting_sort.py
 |       |---merge_sort.py
 |       |---quick_sort.py
-|--- Dynamic Programming
-|       |---Longest_substring.py
-|--- Cache Algorithms
-|       |---LRU.py
-|--- Linkedlist-relevant Algorithms
-|       |---reverse_singly-linked_list.py
-|       |---sorted_linkedlist.py
-|--- Array-relevant Algorithms
-|       |---kth_largest_of_two_sorted_array.py
 |--- Tree-relevant Algorithms
 |       |---right_sideview_of_BT.py
 |       |---tree_height.py
