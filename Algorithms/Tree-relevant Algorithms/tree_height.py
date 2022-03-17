@@ -9,8 +9,8 @@ class Solution:
     def tree_height(self, root):
         # write code here
         ans = 0
-        if root == None:
+        if root is None:
             return ans
-        left = self.tree_height(root.left);
-        right = self.tree_height(root.right);
+        left = self.tree_height(root.left)
+        right = self.tree_height(root.right)
         return max(left, right) + 1
