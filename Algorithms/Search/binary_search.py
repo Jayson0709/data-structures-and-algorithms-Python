@@ -1,5 +1,3 @@
-# Sorry that was a test.
-
 def binary_search(_arr, _k):
     left = 0
     right = len(_arr) - 1
