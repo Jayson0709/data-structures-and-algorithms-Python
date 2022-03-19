@@ -1,5 +1,4 @@
-# This is a modification requirement.
-# I would like you to change this.
+# Sorry that was a test.
 
 def binary_search(arr, k):
     left = 0
