@@ -1,4 +1,4 @@
-### Typical Data Structures and Algorithms in Python
+### Typical Data Structures and Algorithms implemented in Python
 
 Will update the project if I have some time.
 
