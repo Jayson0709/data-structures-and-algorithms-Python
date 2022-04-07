@@ -1,4 +1,4 @@
-# Use list to implement all Stakc's api.
+# Use list to implement a Stack's api.
 class Stack:
     def __init__(self, size=1):
         self.stack = []

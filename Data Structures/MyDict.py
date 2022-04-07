@@ -1,43 +1,39 @@
-class Array(object):
-    
-    def __init__(self, size=64, init=None):
-        self._size = size
-        self._items = [init] * self._size
-    
-    def __getitem__(self, index):
-        return self._items[index]
-    
-    def __setitem__(self, index, value):
-        self._items[index] = value
-    
-    def __len__(self):
-        return self._size
-    
-    def clear(self):
-        for i in range(len(self._size)):
-            self._items[i] = None
+class Dictionary(object):
+    """
+    implementation for dict
+    """
 
-    def __iter__(self):
-        for item in self._items:
-            yield item    
-
-
-class Slot(object):
-    def __init__(self, key, value):
-        self.key, self.value = key, value
-
-
-class HashTable(object):
-    # Never being used
-    UNUSED = None
-    # Used previously, but deleted now.
-    EMPTY = Slot(None, None)
-
-    def __init__(self):
-        self._table = Array(8, init = HashTable.UNUSED)
+    def __init__(self, size=1000):
+        """
+        use list as storage, each element is also a list which is used
+        to solve hash conflict
+        """
+        self.storage = [[] for _ in range(size)]
+        self.size = size
         self.length = 0
-    
-    def __len__(self):
-        return self.length
-    
-    
+
+    def __setitem__(self, key, value):
+        """
+        set key value, if conflicting, append to the sub list
+        """
+        storage_idx = hash(key) % self.size
+        for ele in self.storage[storage_idx]:
+            if key == ele[0]:  # already exist, update it
+                ele[1] = value
+                break
+        else:
+            self.storage[storage_idx].append([key, value])
+            self.length += 1
+
+    def __getitem__(self, key):
+        """
+        get by key, if not found, raise key error
+        :raise: KeyError
+        :return: value
+        """
+        storage_idx = hash(key) % self.size
+        for ele in self.storage[storage_idx]:
+            if ele[0] == key:
+                return ele[1]
+
+        raise KeyError('Key {} dont exist'.format(key))
