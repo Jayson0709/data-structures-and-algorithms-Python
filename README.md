@@ -32,5 +32,6 @@ Algoritms directory
 ```
 Data Structures directory
 |---MyDict.py
-|---MyHashMap.py
+|---MyHashTable.py
+|---MyStack.py
 ```
