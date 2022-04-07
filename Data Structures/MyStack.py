@@ -10,7 +10,7 @@ class Stack:
         else:
             return False
 
-    def peak(self):
+    def peek(self):
         return self.stack[-1]
 
     def pop(self):
